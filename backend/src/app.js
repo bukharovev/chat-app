@@ -11,6 +11,9 @@ export default () => {
     credentials: true,
   };
   app.use(cors(corsOptions));
+  const path = `${__dirname}/../../client/build`;
+  console.log('!!! path = ', path);
+  app.use(Express.static(path));
   // app.use(bodyParser.urlencoded({ extended: true }))
   // app.use(session({
   //   secret: 'secret key',
