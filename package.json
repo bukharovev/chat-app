@@ -1,0 +1,37 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "pm2 start ./backend/dist/bin/server.js",
+    "client": "npm start --prefix client",
+    "start": "concurrently 'npm run server' 'npm run client'",
+    "build": "babel ./backend/src --out-dir ./backend/dist --source-maps inline"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bukharovev/chat-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bukharovev/chat-app/issues"
+  },
+  "homepage": "https://github.com/bukharovev/chat-app#readme"
+}
