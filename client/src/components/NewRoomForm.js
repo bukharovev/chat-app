@@ -20,7 +20,6 @@ const NewRoomForm = (props) => {
                   value={roomName} 
                   onChange={handleChange}
                   required />
-              <button id="create-room-btn" type="submit">+</button>
       </form>
     </div>
   )

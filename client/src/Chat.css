@@ -109,10 +109,6 @@ html, body {
   border: 0;
 }
 
-.new-room-form button:hover {
-  box-shadow: 1px 1px #fff;
-}
-
 .new-room-form input::placeholder {
   color: var(--main-text-color);
   font-weight: 200;
