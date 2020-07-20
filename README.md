@@ -1,3 +1,3 @@
 ### Usage
-  cd backend && make start  
-  cd client && make start
+  cd backend && npm i && make start  
+  cd client && npm i && make start
