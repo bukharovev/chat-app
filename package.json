@@ -15,10 +15,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "pm2 start ./backend/dist/bin/server.js",
+    "server": "node ./backend/dist/bin/server.js",
     "client": "npm start --prefix client",
-    "start": "concurrently 'npm run server' 'npm run client'",
-    "build": "babel ./backend/src --out-dir ./backend/dist --source-maps inline"
+    "dev": "concurrently 'npm run server' 'npm run client'",
+    "build": "babel ./backend/src --out-dir ./backend/dist --source-maps inline",
+    "start": "npm run build && npm run dev"
   },
   "files": [
     "dist"
