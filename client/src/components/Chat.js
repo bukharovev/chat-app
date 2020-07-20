@@ -70,14 +70,14 @@ const Chat = ({ location }) => {
 	}, [username, users])
 	
 	const createRoom = (roomName) => {
-		const newRoom = { name: roomName, usersInRoom: new Set() }
-		setRooms(rooms => [...rooms, newRoom])
 		if (socket) {
 			socket.emit('createRoom', { roomName }, (error) => {
 				if (error) {
 					alert(error)
+					return
 				}
-
+				const newRoom = { name: roomName, usersInRoom: new Set() }
+				setRooms(rooms => [...rooms, newRoom])
 				subscribeToRoom(roomName)
 			})
 		}
