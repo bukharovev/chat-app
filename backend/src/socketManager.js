@@ -21,7 +21,7 @@
 
 //     socket.join(defaultRoomName);
 
-//     io.to(defaultRoomName).emit('roomData', { room: defaultRoom, users: getUsersInRoom(defaultRoomName) });
+// io.todefaultRoomName.emit('roomData',{room:defaultRoom,users:getUsersInRoom(defaultRoomName)});
 
 //     return callback();
 //   });
