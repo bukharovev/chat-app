@@ -19,7 +19,8 @@
     "client": "npm start --prefix client",
     "dev": "concurrently 'npm run server' 'npm run client'",
     "build": "babel ./backend/src --out-dir ./backend/dist --source-maps inline",
-    "start": "npm run build && npm run dev"
+    "startDev": "npm run build && npm run dev",
+    "start": "pm2-runtime start ecosystem.config.js --env production"
   },
   "files": [
     "dist"
